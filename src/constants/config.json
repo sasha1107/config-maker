@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "config": "tabWidth",
+    "options": [2, 4],
+    "default": 2
+  },
+  {
+    "id": 2,
+    "config": "semi",
+    "options": [true, false],
+    "default": true
+  },
+  {
+    "id": 3,
+    "config": "singleQuote",
+    "options": [true, false],
+    "default": false
+  },
+  {
+    "id": 4,
+    "config": "jsxSingleQuote",
+    "options": [true, false],
+    "default": false
+  },
+  {
+    "id": 5,
+    "config": "trailingComma",
+    "options": ["all", "es5", "none"],
+    "default": "all"
+  }
+]

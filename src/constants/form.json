@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "config": "tabWidth",
+    "options": [2, 4],
+    "default": 2,
+    "description": "Number of spaces per indentation level."
+  },
+  {
+    "id": 2,
+    "config": "semi",
+    "options": [true, false],
+    "default": true,
+    "description": "Print semicolons at the ends of statements."
+  },
+  {
+    "id": 3,
+    "config": "singleQuote",
+    "options": [true, false],
+    "default": false,
+    "description": "Use single quotes instead of double quotes."
+  },
+  {
+    "id": 4,
+    "config": "jsxSingleQuote",
+    "options": [true, false],
+    "default": false,
+    "description": "Use single quotes instead of double quotes in JSX."
+  },
+  {
+    "id": 5,
+    "config": "trailingComma",
+    "options": ["all", "es5", "none"],
+    "default": "all",
+    "description": "Print trailing commas wherever possible when multi-line."
+  }
+]

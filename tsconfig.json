@@ -19,9 +19,19 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["./src/*"]
+      "@lib/*": ["lib/*"],
+      "@shadcn/*": ["components/ui/*"],
+      "@shadcn": ["components/ui"],
+      "@components/*": ["components/*"],
+      "@components": ["components"],
+      "@pages": ["pages"],
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"],
+      "@utils": ["utils"],
+      "@constants/*": ["constants/*"],
+      "@constants": ["constants"]
     }
   },
   "include": ["src"],
