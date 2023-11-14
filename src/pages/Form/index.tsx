@@ -59,7 +59,7 @@ const Form = () => {
         <div>
           {options.map(({ code }) => (
             <>
-              <pre className='bg-gray-600 text-white'>{code}</pre>
+              <pre className='bg-gray-600 text-white'>{code.join('\n')}</pre>
             </>
           ))}
         </div>

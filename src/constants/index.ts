@@ -7,7 +7,7 @@ type formDataType = {
   options: {
     value: string | boolean | number;
     description: string;
-    code: string;
+    code: string[];
   }[];
   default: string | boolean | number;
   description: string;

@@ -6,12 +6,12 @@
       {
         "value": 2,
         "description": "Use 2 spaces for indentation.",
-        "code": "  "
+        "code": ["  "]
       },
       {
         "value": 4,
         "description": "Use 4 spaces for indentation.",
-        "code": "    "
+        "code": ["    "]
       }
     ],
     "default": 2,
@@ -24,12 +24,12 @@
       {
         "value": true,
         "description": "Add semicolons at the end of statements.",
-        "code": ";"
+        "code": [";"]
       },
       {
         "value": false,
         "description": "Do not add semicolons at the end of statements.",
-        "code": ""
+        "code": [""]
       }
     ],
     "default": true,
@@ -42,12 +42,12 @@
       {
         "value": true,
         "description": "Use single quotes for strings.",
-        "code": "'"
+        "code": ["'"]
       },
       {
         "value": false,
         "description": "Use double quotes for strings.",
-        "code": "\""
+        "code": ["\""]
       }
     ],
     "default": false,
@@ -60,12 +60,12 @@
       {
         "value": true,
         "description": "Use single quotes for strings.",
-        "code": "'"
+        "code": ["'"]
       },
       {
         "value": false,
         "description": "Use double quotes for strings.",
-        "code": "\""
+        "code": ["\""]
       }
     ],
     "default": false,
@@ -78,20 +78,56 @@
       {
         "value": "all",
         "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
-        "code": ","
+        "code": [","]
       },
       {
         "value": "es5",
         "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
-        "code": ","
+        "code": [","]
       },
       {
         "value": "none",
         "description": "Remove all trailing commas.",
-        "code": ""
+        "code": [""]
       }
     ],
     "default": "all",
-    "description": "Print trailing commas wherever possible when multi-line."
+    "description": "여러 줄로 쉼표로 구분된 구문 구조에서는 가능한 한 후행 쉼표를 인쇄합니다. "
+  },
+  {
+    "id": 6,
+    "config": "bracketSpacing",
+    "options": [
+      {
+        "value": true,
+        "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
+        "code": ["{ foo: bar }"]
+      },
+      {
+        "value": false,
+        "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
+        "code": ["{foo: bar}"]
+      }
+    ],
+    "default": true,
+    "description": "객체 리터럴의 괄호 사이에 공백을 인쇄합니다."
+  },
+  {
+    "id": 7,
+    "config": "bracketSameLine",
+    "options": [
+      {
+        "value": true,
+        "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
+        "code": [""]
+      },
+      {
+        "value": false,
+        "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
+        "code": [""]
+      }
+    ],
+    "default": false,
+    "description": "여러 줄로 된 HTML(HTML, JSX, Vue, Angular) 요소의 >를 다음 줄에 단독으로 두지 않고 마지막 줄 끝에 배치합니다(self closing 태그는 적용되지 않음)."
   }
 ]
