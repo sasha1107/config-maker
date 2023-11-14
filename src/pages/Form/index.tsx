@@ -49,21 +49,19 @@ const Form = () => {
       {config}
       <div>{progress}</div>
       <div>
-        <div>
-          {options.map(({ description }) => (
-            <>
-              <div>{description}</div>
-            </>
+        <div className='flex gap-2'>
+          {options.map(({ description, value }) => (
+            <div key={value.toString()}>{description}</div>
           ))}
         </div>
-        <div>
-          {options.map(({ code }) => (
-            <>
+        <div className='flex gap-2'>
+          {options.map(({ code, value }) => (
+            <div key={value.toString()}>
               <pre className='bg-gray-600 text-white'>{code.join('\n')}</pre>
-            </>
+            </div>
           ))}
         </div>
-        <div>
+        <div className='flex gap-2'>
           {options.map(({ value }) => (
             <Button
               key={value.toString()}

@@ -23,13 +23,13 @@
     "options": [
       {
         "value": true,
-        "description": "Add semicolons at the end of statements.",
-        "code": [";"]
+        "description": "모든 문장의 끝에 세미콜론을 추가합니다.",
+        "code": ["console.log(\"hello\");"]
       },
       {
         "value": false,
-        "description": "Do not add semicolons at the end of statements.",
-        "code": [""]
+        "description": "모든 문장의 끝에 세미콜론을 추가하지 않습니다.",
+        "code": ["console.log(\"hello\")"]
       }
     ],
     "default": true,
@@ -42,12 +42,12 @@
       {
         "value": true,
         "description": "Use single quotes for strings.",
-        "code": ["'"]
+        "code": ["console.log('hello');"]
       },
       {
         "value": false,
         "description": "Use double quotes for strings.",
-        "code": ["\""]
+        "code": ["console.log(\"hello\");"]
       }
     ],
     "default": false,
@@ -119,12 +119,27 @@
       {
         "value": true,
         "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
-        "code": [""]
+        "code": [
+          "<button",
+          "  className=\"prettier-class\"",
+          "  id=\"prettier-id\"",
+          "  onClick={this.handleClick}>",
+          "  Click Here",
+          "</button>"
+        ]
       },
       {
         "value": false,
         "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
-        "code": [""]
+        "code": [
+          "<button",
+          "  className=\"prettier-class\"",
+          "  id=\"prettier-id\"",
+          "  onClick={this.handleClick}",
+          ">",
+          "  Click Here",
+          "</button>"
+        ]
       }
     ],
     "default": false,
