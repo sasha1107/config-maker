@@ -1,21 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Splash, Form, Result, Loading } from '@pages';
-import { configData, formData } from '@constants';
-import { joinJSON } from '@utils';
 
-type formDataType = {
-  id: number;
-  config: string;
-  options: string[] | boolean[] | number[];
-  default: string | boolean | number;
-  description: string;
-};
-type configDataType = {
-  id: number;
-  config: string;
-  options: string[] | boolean[] | number[];
-  default: string | boolean | number;
-};
 const routes = createBrowserRouter([
   {
     path: '/',
@@ -32,16 +17,12 @@ const routes = createBrowserRouter([
   {
     path: '/form',
     element: <Form />,
-    loader: () => {
-      return new Promise((resolve) => {
-        const result = joinJSON<formDataType, configDataType>(
-          formData,
-          configData,
-          'config'
-        );
-        resolve(result);
-      });
-    },
+    // loader: () => {
+    //   return new Promise((resolve) => {
+    //     const result = joinJSON(formData, configData, 'config');
+    //     resolve(result);
+    //   });
+    // },
   },
   {
     path: '/result',

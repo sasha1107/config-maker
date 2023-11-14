@@ -2,35 +2,95 @@
   {
     "id": 1,
     "config": "tabWidth",
-    "options": [2, 4],
+    "options": [
+      {
+        "value": 2,
+        "description": "Use 2 spaces for indentation.",
+        "code": "  "
+      },
+      {
+        "value": 4,
+        "description": "Use 4 spaces for indentation.",
+        "code": "    "
+      }
+    ],
     "default": 2,
     "description": "Number of spaces per indentation level."
   },
   {
     "id": 2,
     "config": "semi",
-    "options": [true, false],
+    "options": [
+      {
+        "value": true,
+        "description": "Add semicolons at the end of statements.",
+        "code": ";"
+      },
+      {
+        "value": false,
+        "description": "Do not add semicolons at the end of statements.",
+        "code": ""
+      }
+    ],
     "default": true,
     "description": "Print semicolons at the ends of statements."
   },
   {
     "id": 3,
     "config": "singleQuote",
-    "options": [true, false],
+    "options": [
+      {
+        "value": true,
+        "description": "Use single quotes for strings.",
+        "code": "'"
+      },
+      {
+        "value": false,
+        "description": "Use double quotes for strings.",
+        "code": "\""
+      }
+    ],
     "default": false,
     "description": "Use single quotes instead of double quotes."
   },
   {
     "id": 4,
     "config": "jsxSingleQuote",
-    "options": [true, false],
+    "options": [
+      {
+        "value": true,
+        "description": "Use single quotes for strings.",
+        "code": "'"
+      },
+      {
+        "value": false,
+        "description": "Use double quotes for strings.",
+        "code": "\""
+      }
+    ],
     "default": false,
     "description": "Use single quotes instead of double quotes in JSX."
   },
   {
     "id": 5,
     "config": "trailingComma",
-    "options": ["all", "es5", "none"],
+    "options": [
+      {
+        "value": "all",
+        "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
+        "code": ","
+      },
+      {
+        "value": "es5",
+        "description": "Add a trailing comma where valid in ES5 (objects, arrays, etc.)",
+        "code": ","
+      },
+      {
+        "value": "none",
+        "description": "Remove all trailing commas.",
+        "code": ""
+      }
+    ],
     "default": "all",
     "description": "Print trailing commas wherever possible when multi-line."
   }
