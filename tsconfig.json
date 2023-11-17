@@ -31,7 +31,9 @@
       "@utils/*": ["utils/*"],
       "@utils": ["utils"],
       "@constants/*": ["constants/*"],
-      "@constants": ["constants"]
+      "@constants": ["constants"],
+      "@hooks/*": ["hooks/*"],
+      "@hooks": ["hooks"]
     }
   },
   "include": ["src"],

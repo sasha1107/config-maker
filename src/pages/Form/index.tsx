@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@shadcn/button';
 import { formData } from '@constants';
+import { Code } from '@components';
 
 const Form = () => {
   const [formStep, setFormStep] = useState(1);
@@ -57,7 +58,7 @@ const Form = () => {
         <div className='flex gap-2'>
           {options.map(({ code, value }) => (
             <div key={value.toString()}>
-              <pre className='bg-gray-600 text-white'>{code.join('\n')}</pre>
+              <Code compact>{code.join('\n')}</Code>
             </div>
           ))}
         </div>
