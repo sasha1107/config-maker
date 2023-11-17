@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@shadcn/button';
+import { useToast } from '@shadcn/use-toast';
 import { formData } from '@constants';
 import { Code } from '@components';
 
@@ -10,7 +11,7 @@ const Form = () => {
   const navigate = useNavigate();
   const [answer, setAnswer] = useState(new Map());
   const [progress, setProgress] = useState(0);
-
+  const { toast } = useToast();
   useEffect(() => {
     setProgress(((formStep - 1) / formData.length) * 100);
   }, [formStep]);
@@ -37,7 +38,10 @@ const Form = () => {
   };
   const handlePrevStep = () => {
     if (formStep === 1) {
-      alert('첫번째 페이지입니다.');
+      toast({
+        title: '첫번째 페이지입니다.',
+        className: 'top-0 left-0',
+      });
       return;
     }
     setFormStep((prev) => prev - 1);
