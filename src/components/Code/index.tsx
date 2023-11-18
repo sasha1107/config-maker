@@ -13,7 +13,7 @@ const Code = ({ children, copy = false, compact = false }: CodeProps) => {
   const [hoverRef, isHovered] = useHover<HTMLPreElement>();
   return (
     <pre
-      className={`bg-gray-800 rounded text-gray-100 text-sm ${padding}`}
+      className={`bg-gray-800 rounded text-gray-100 text-sm ${padding} w-full`}
       ref={hoverRef}
     >
       {copy && (

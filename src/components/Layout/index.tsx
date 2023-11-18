@@ -1,7 +1,16 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
+// import Ellipse from "@assets/ellipse.svg?react";
+// import "./style.css";
 
 const Layout = ({ children }: { children: ReactNode }) => {
-  return <div className='bg-gray-500'>{children}</div>;
+  return (
+    <div className="w-screen h-screen bg-[#1D1D1D] p-8 bg text-white">
+      {/* <div>
+        <Ellipse />
+      </div> */}
+      {children}
+    </div>
+  );
 };
 
 export default Layout;

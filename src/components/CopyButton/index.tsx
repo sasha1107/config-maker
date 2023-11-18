@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Button } from '@shadcn/button';
-import { Copy, CopyCheck } from 'lucide-react';
+import { Button } from "@shadcn/button";
+import { Copy, CopyCheck } from "lucide-react";
+import { useCopy } from "@hooks";
 
 type CopyButtonProps = {
   copyText: string;
@@ -8,31 +8,20 @@ type CopyButtonProps = {
 };
 
 const CopyButton = ({ copyText, visible }: CopyButtonProps) => {
-  const [copyState, setCopyState] = useState<'idle' | 'copied'>('idle');
-  const visibility = visible ? 'visible' : 'invisible';
-  const handleClickCopyButton = async (code: string) => {
-    try {
-      setCopyState('copied');
-      await navigator.clipboard.writeText(code);
-      setTimeout(() => {
-        setCopyState('idle');
-      }, 4000);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const { copyState, copy } = useCopy();
+  const visibility = visible ? "visible" : "invisible";
 
   return (
     <Button
-      variant={'outline'}
-      size={'icon'}
-      onClick={() => handleClickCopyButton(copyText)}
+      variant={"outline"}
+      size={"icon"}
+      onClick={() => copy(copyText)}
       className={`float-right ${visibility}`}
     >
-      {copyState === 'idle' ? (
-        <Copy className='h-4 w-4' />
+      {copyState === "idle" ? (
+        <Copy className="h-4 w-4" />
       ) : (
-        <CopyCheck className='h-4 w-4' />
+        <CopyCheck className="h-4 w-4" />
       )}
     </Button>
   );

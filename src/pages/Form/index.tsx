@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@shadcn/button';
-import { useToast } from '@shadcn/use-toast';
-import { formData } from '@constants';
-import { Code } from '@components';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@shadcn/button";
+import { useToast } from "@shadcn/use-toast";
+import { Progress } from "@shadcn/progress";
+import { formData } from "@constants";
+import { Code } from "@components";
 
 const Form = () => {
   const [formStep, setFormStep] = useState(1);
@@ -18,7 +19,7 @@ const Form = () => {
 
   useEffect(() => {
     if (formStep > formData.length) {
-      navigate('/result', {
+      navigate("/result", {
         state: answer,
       });
     }
@@ -39,8 +40,8 @@ const Form = () => {
   const handlePrevStep = () => {
     if (formStep === 1) {
       toast({
-        title: '첫번째 페이지입니다.',
-        className: 'top-0 left-0',
+        title: "첫번째 페이지입니다.",
+        className: "top-0 left-0",
       });
       return;
     }
@@ -52,21 +53,23 @@ const Form = () => {
         <Button onClick={handlePrevStep}>이전</Button>
       </div>
       {config}
-      <div>{progress}</div>
       <div>
-        <div className='flex gap-2'>
+        <Progress value={progress} />
+      </div>
+      <div>
+        <div className="flex gap-2">
           {options.map(({ description, value }) => (
             <div key={value.toString()}>{description}</div>
           ))}
         </div>
-        <div className='flex gap-2'>
+        <div className="flex gap-2">
           {options.map(({ code, value }) => (
             <div key={value.toString()}>
-              <Code compact>{code.join('\n')}</Code>
+              <Code compact>{code.join("\n")}</Code>
             </div>
           ))}
         </div>
-        <div className='flex gap-2'>
+        <div className="flex gap-2">
           {options.map(({ value }) => (
             <Button
               key={value.toString()}
@@ -78,7 +81,7 @@ const Form = () => {
         </div>
         <div>
           <Button
-            variant={'ghost'}
+            variant={"ghost"}
             onClick={() => handleNextStep(defaultOption, config)}
           >
             SKIP(기본값으로 설정)

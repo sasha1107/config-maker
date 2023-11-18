@@ -26,7 +26,7 @@ const Install = () => {
         ))}
       </TabsList>
       {data.map(({ tool, content }) => (
-        <TabsContent key={tool} value={tool} className='flex'>
+        <TabsContent key={tool} value={tool} className='w-full'>
           <Code copy>{content}</Code>
         </TabsContent>
       ))}

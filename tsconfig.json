@@ -33,9 +33,14 @@
       "@constants/*": ["constants/*"],
       "@constants": ["constants"],
       "@hooks/*": ["hooks/*"],
-      "@hooks": ["hooks"]
+      "@hooks": ["hooks"],
+      "@assets/*": ["assets/*"],
+      "@assets": ["assets"],
+      "@types/*": ["types/*"],
+      "@types": ["types"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "svg.d.ts"],
+  "types": ["vite-plugin-svgr/client"], // 이부분 추가
   "references": [{ "path": "./tsconfig.node.json" }]
 }

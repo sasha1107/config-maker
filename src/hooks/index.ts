@@ -1,3 +1,4 @@
-import useHover from './useHover';
+import useHover from "./useHover";
+import useCopy from "./useCopy";
 
-export { useHover };
+export { useHover, useCopy };
