@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+
 type BlockProps = {
   color?: string;
   children: ReactNode;
