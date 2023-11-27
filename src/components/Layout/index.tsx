@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="w-screen h-screen bg-[#1D1D1D] p-8 bg text-white">
+    <div className="w-screen h-screen bg-[#1D1D1D] p-8 bg text-white overflow-y-auto">
       {/* <div>
         <Ellipse />
       </div> */}
