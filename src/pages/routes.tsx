@@ -1,34 +1,39 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Splash, Form, Result, Loading } from '@pages';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Splash, Form, Result, Loading } from "@pages";
 
-const routes = createBrowserRouter([
+const routes = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Splash />,
+      // loader: async () => {
+      //   return new Promise((resolve) => {
+      //     setTimeout(() => {
+      //       resolve({});
+      //       console.log('done');
+      //     }, 3000); // 3-second delay
+      //   });
+      // },
+    },
+    {
+      path: "/form",
+      element: <Form />,
+      // loader: () => {
+      //   return new Promise((resolve) => {
+      //     const result = joinJSON(formData, configData, 'config');
+      //     resolve(result);
+      //   });
+      // },
+    },
+    {
+      path: "/result",
+      element: <Result />,
+    },
+  ],
   {
-    path: '/',
-    element: <Splash />,
-    // loader: async () => {
-    //   return new Promise((resolve) => {
-    //     setTimeout(() => {
-    //       resolve({});
-    //       console.log('done');
-    //     }, 3000); // 3-second delay
-    //   });
-    // },
+    basename: "/config-maker",
   },
-  {
-    path: '/form',
-    element: <Form />,
-    // loader: () => {
-    //   return new Promise((resolve) => {
-    //     const result = joinJSON(formData, configData, 'config');
-    //     resolve(result);
-    //   });
-    // },
-  },
-  {
-    path: '/result',
-    element: <Result />,
-  },
-]);
+);
 const Router = () => {
   return <RouterProvider router={routes} fallbackElement={<Loading />} />;
 };
