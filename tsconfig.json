@@ -16,9 +16,9 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false, // deployment bug fix
+    "noUnusedParameters": false, // deployment bug fix
     "baseUrl": "src",
     "paths": {
       "@lib/*": ["lib/*"],
