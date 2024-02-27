@@ -1,0 +1,23 @@
+.storybook-input {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+.storybook-input input {
+  flex-grow: 1;
+}
+.block {
+  width: 100%;
+}
+button.clear {
+  position: absolute;
+  left: auto;
+  transform: translateX(-100%);
+  z-index: 1;
+  cursor: pointer;
+}
+.count {
+  margin-left: 10px;
+  color: #333;
+  font-size: 14px;
+}
